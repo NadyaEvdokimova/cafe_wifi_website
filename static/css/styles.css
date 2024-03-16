@@ -31,7 +31,6 @@ header h1 {
   color: #fff;
   font-family: "Madimi One", sans-serif;
   font-weight: 200;
-  font-style: cursive;
   letter-spacing: 3px;
 }
 
@@ -89,6 +88,7 @@ li > a {
   gap: 10px;
   margin-top: 2em;
   margin-bottom: 2em;
+  margin-left: 0;
 }
 
 
@@ -146,7 +146,7 @@ li > a {
 }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (min-width: 501px) and (max-width: 900px) {
 .container {
     display: flex;
     flex-direction: column;
@@ -156,14 +156,14 @@ li > a {
 }
 }
 
-@media screen and (max-width: 1350px) {
+@media screen and (min-width: 901px) and (max-width: 1350px) {
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 }
 
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 1351px) and (min-width: 1900px) {
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
