@@ -6,6 +6,7 @@ from wtforms import StringField, SubmitField, URLField, BooleanField
 from wtforms.validators import DataRequired, URL
 from datetime import datetime
 import os.path
+import os
 
 
 app = Flask(__name__)
@@ -18,7 +19,7 @@ db_path = os.path.join(BASE_DIR, db_name)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + db_path
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 db.init_app(app)
-app.config['SECRET_KEY'] = 'hgetyGYUkllMbvjudhdn'
+app.config['SECRET_KEY'] = os.environ.get('FLASK_KEY')
 Bootstrap5(app)
 
 
@@ -137,4 +138,4 @@ def delete_cafe(cafe_id):
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5001)
+    app.run(debug=False, port=5001)
