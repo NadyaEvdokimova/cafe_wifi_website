@@ -1,0 +1,15 @@
+{% include "header.html" %}
+{% from 'bootstrap5/form.html' import render_form %}
+
+    <div class="new_cafe">
+{% if is_edit: %}
+       <h1>Edit The Cafe</h1>
+        {% else: %}
+      <h1>Add A New Cafe</h1>
+        {% endif %}
+        {{ render_form(form, novalidate=True) }}
+
+    </div>
+
+
+{% include "footer.html" %}

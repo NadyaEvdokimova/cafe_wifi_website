@@ -1,0 +1,214 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #F2F2F2;
+  padding: 0 16px;
+  overflow-x: hidden;
+  font-family: "Madimi One", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+header {
+  background-color: #0B1726;
+  margin: auto -16px;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+    padding: 0.4rem;
+}
+
+header h1 {
+  color: #fff;
+  font-family: "Madimi One", sans-serif;
+  font-weight: 200;
+  font-style: cursive;
+  letter-spacing: 3px;
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+  height: 2.5rem;
+  position: relative;
+  bottom: 0;
+}
+
+nav {
+  width: 50%;
+  max-width: 300px;
+  height: 50px;
+}
+
+footer p {
+  color: #0B1726;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-inline-start: 0;
+  margin-block: 0;
+  height: 100%;
+}
+
+nav > ul > li {
+  color: #F2F2F2;
+  margin: 0 0.2rem;
+  padding: 0.2rem;
+  display: block;
+}
+
+nav > ul > li:hover {
+  background-color: #F2F2F2;
+  color: #0B1726;
+  cursor: pointer;
+}
+
+li > a {
+  font-size: 1.5em;
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 800px;
+  gap: 10px;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+
+
+.cafe_card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  padding: 10px;
+  text-align: center;
+}
+
+.cafe_card:hover {
+  box-shadow: 0 8px 16px 0 #111D40;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  }
+
+.name {
+  color: #038C8C;
+}
+
+.cafe_img {
+    width: 400px;
+    height: 40%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cafe_card p {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.true_false {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.cafe_card a:not(.no_clr) {
+    text-decoration: none;
+    color: #038C8C;
+}
+
+@media screen and (max-width: 500px) {
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.cafe_img {
+    width: 250px;
+}
+.cafe_card p {
+  font-size: 1em;
+}
+}
+
+@media screen and (max-width: 900px) {
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.cafe_img {
+    width: 400px;
+}
+}
+
+@media screen and (max-width: 1350px) {
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+}
+
+@media screen and (min-width: 1900px) {
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-left: 2rem;
+}
+}
+
+@media screen and (min-width: 2300px) {
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin-left: 2rem;
+}
+}
+
+.new_cafe {
+  display: grid;
+  grid-template-columns: 5fr;
+  justify-content: center;
+  padding: 5%;
+
+}
+
+.btn {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.del_btn {
+  color: #C62112;
+  text-decoration: none;
+}
+
+.edit_btn {
+    text-decoration: none;
+    color: #038C8C;
+}
+
+.edit_btn:hover {
+  color: #13F2F2 !important;
+}
+
+.del_btn:hover {
+  color: #E06100;
+}
+
+
+
